@@ -26,3 +26,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+svg {
+  width: 30px;
+  height: 27px;
+  display: block;
+}
+
+#GridColumn {
+  float: left;
+}
+
+#GridColumn:nth-child(2) {
+  background-color: blue;
+  margin-top: 15px;
+}
