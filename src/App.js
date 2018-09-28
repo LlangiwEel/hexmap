@@ -22,7 +22,7 @@ const GridColumn = () => {
 
 const Grid = () => {
   return (
-  <div>
+  <div id="Grid">
     <GridColumn />
     <GridColumn />
     <GridColumn />
