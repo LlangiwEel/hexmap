@@ -1,0 +1,11 @@
+.map-container {
+  position: relative;
+}
+.hex {
+  fill: #334455;
+}
+.text {
+  fill: white;
+  font: bold 30px sans-serif;
+  text-anchor: left;
+}

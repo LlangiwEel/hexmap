@@ -27,13 +27,6 @@
   to { transform: rotate(360deg); }
 }
 
-svg {
-  width: 61px;
-  height: 53px;
-  display: block;
-  margin-left: -15px;
-}
-
 #GridColumn {
   float: left;
 }
