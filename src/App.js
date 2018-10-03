@@ -18,6 +18,14 @@ const GridColumn = () => {
       <HexTile />
       <HexTile />
       <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
     </div>
   )
 }
@@ -25,6 +33,14 @@ const GridColumn = () => {
 const Grid = () => {
   return (
   <div id="Grid">
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
     <GridColumn />
     <GridColumn />
     <GridColumn />

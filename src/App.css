@@ -31,10 +31,14 @@
   float: left;
 }
 
-#GridColumn:nth-child(2) {
-  margin-top: 14px;
+#GridColumn:nth-child(2n+2) {
+  margin-top: 26px;
 }
 
 #Grid {
   margin: 20px;
+}
+
+.redhex {
+  fill: red;
 }
