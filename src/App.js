@@ -4,49 +4,7 @@ import './App.css';
 import { generateRectMap } from './mapHelpers/mapGenerators'
 import HexTile from './components/HexTile'
 
-// const HexTile = () => {
-//   return (
-//     <div>
-//     <svg><polygon className="hex" points="30,13 22.5,26 7.5,26 0,13 7.5,0 22.5,0"></polygon></svg>
-//     </div>
-//   );
-// }
 
-const GridColumn = () => {
-  return (
-    <div id="GridColumn">
-      <HexTile />
-      <HexTile />
-      <HexTile />
-      <HexTile />
-      <HexTile />
-      <HexTile />
-      <HexTile />
-      <HexTile />
-      <HexTile />
-      <HexTile />
-      <HexTile />
-    </div>
-  )
-}
-
-const Grid = () => {
-  return (
-  <div id="Grid">
-    <GridColumn />
-    <GridColumn />
-    <GridColumn />
-    <GridColumn />
-    <GridColumn />
-    <GridColumn />
-    <GridColumn />
-    <GridColumn />
-    <GridColumn />
-    <GridColumn />
-    <GridColumn />
-  </div>
-)
-}
 
 const map = generateRectMap(3, 3)
 
