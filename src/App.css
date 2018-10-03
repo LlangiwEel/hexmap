@@ -28,20 +28,24 @@
 }
 
 svg {
-  width: 30px;
-  height: 27px;
+  width: 61px;
+  height: 53px;
   display: block;
-  margin-left: -6px;
+  margin-left: -15px;
 }
 
 #GridColumn {
   float: left;
 }
 
-#GridColumn:nth-child(2) {
-  margin-top: 14px;
+#GridColumn:nth-child(2n+2) {
+  margin-top: 26px;
 }
 
 #Grid {
   margin: 20px;
+}
+
+.redhex {
+  fill: red;
 }

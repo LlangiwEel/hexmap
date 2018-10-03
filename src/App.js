@@ -2,17 +2,42 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-const HexTile = () => {
-  return (
-    <div>
-    <svg><polygon className="hex" points="30,13 22.5,26 7.5,26 0,13 7.5,0 22.5,0"></polygon></svg>
-    </div>
+
+
+const MapGenForm = () => {
+  return (<div><svg><polygon className="redhex" points="60,26 45,52 15,52 0,26 15,0 45,0"></polygon></svg></div>);
+};
+
+const ActMap = () => {
+  return (<div><svg><polygon className="hex" points="60,26 45,52 15,52 0,26 15,0 45,0"></polygon></svg></div>);
+}
+
+class HexTile extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasMap: true
+    }
+  }
+
+  render() {
+    return (
+      this.state.hasMap ? <ActMap /> : <MapGenForm />
   );
+};
 }
 
 const GridColumn = () => {
   return (
     <div id="GridColumn">
+      <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
+      <HexTile />
       <HexTile />
       <HexTile />
       <HexTile />
@@ -23,6 +48,14 @@ const GridColumn = () => {
 const Grid = () => {
   return (
   <div id="Grid">
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
+    <GridColumn />
     <GridColumn />
     <GridColumn />
     <GridColumn />
