@@ -4,14 +4,27 @@ import './App.css';
 import { generateRectMap } from './mapHelpers/mapGenerators'
 import HexTile from './components/HexTile'
 
+let xvalue = 4;
+let yvalue = 4;
+
+let map = generateRectMap(xvalue, yvalue)
 
 
-const map = generateRectMap(3, 3)
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.clickHandler = this.clickHandler.bind(this);
+  };
+  clickHandler() {
+    xvalue = 10;
+    map = generateRectMap(xvalue, yvalue);
+    this.forceUpdate();
+  };
   render() {
     return (
       <div className="App">
+      <button onClick={this.clickHandler}>Button</button>
         <div className="map-container">
           <svg viewBox={`0 0 ${window.innerWidth + 500} ${window.innerHeight + 2500}`}>
             <g transform="rotate(-30) translate(0, 270)">
@@ -34,5 +47,7 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;
