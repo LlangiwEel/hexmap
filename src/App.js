@@ -16,7 +16,7 @@ class App extends Component {
     super(props)
     this.state = {
       map: {},
-      xvalue: 0,
+      xvalue: 5,
       yvalue: 5
     }
     this.clickHandler = this.clickHandler.bind(this);
@@ -26,25 +26,27 @@ class App extends Component {
 
 
   xChange(event) {
-    this.setState({
-      xvalue: event.target.value
-    })
+    xvalue = event.target.value
+    console.log(xvalue)
   }
 
   yChange(event) {
-    this.setState({
-      yvalue: event.target.value
-    })
+    yvalue = event.target.value
+    console.log(yvalue)
   }
 
   clickHandler() {
-    this.state.map = generateRectMap(this.state.xvalue, this.state.yvalue)
+    this.setState({ map: generateRectMap(xvalue, yvalue) })
 
   };
   render() {
     return (
       <div className="App">
-      <p>xvalue</p><input onChange={this.xChange}></input><p>yvalue</p><input onChange={this.yChange}></input>
+      <p>xvalue</p>
+      <input onChange={this.xChange}></input>
+      <p>yvalue</p>
+      <input onChange={this.yChange}></input>
+      <p>Submit</p>
       <button onClick={this.clickHandler}>Button</button>
         <div className="map-container">
           <svg viewBox={`0 0 ${window.innerWidth + 500} ${window.innerHeight + 2500}`}>
