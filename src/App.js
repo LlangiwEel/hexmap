@@ -16,8 +16,8 @@ class App extends Component {
     super(props)
     this.state = {
       map: {},
-      xvalue: 5,
-      yvalue: 5
+      xvalue: 0,
+      yvalue: 0
     }
     this.clickHandler = this.clickHandler.bind(this);
     this.xChange = this.xChange.bind(this);
@@ -26,28 +26,34 @@ class App extends Component {
 
 
   xChange(event) {
-    xvalue = event.target.value
-    console.log(xvalue)
+    this.setState({
+      xvalue: event.target.value
+    })
   }
 
   yChange(event) {
-    yvalue = event.target.value
-    console.log(yvalue)
+    this.setState({
+      yvalue: event.target.value
+    })
   }
 
   clickHandler() {
-    this.setState({ map: generateRectMap(xvalue, yvalue) })
+    this.setState({ map: generateRectMap(this.state.xvalue, this.state.yvalue) })
 
   };
   render() {
     return (
       <div className="App">
-      <p>xvalue</p>
-      <input onChange={this.xChange}></input>
-      <p>yvalue</p>
-      <input onChange={this.yChange}></input>
-      <p>Submit</p>
-      <button onClick={this.clickHandler}>Button</button>
+      <div className="menu-container">
+      <label>xvalue
+      <input placeholder={this.state.xvalue} onChange={this.xChange}  />
+      </label>
+      <label>yvalue
+      <input placeholder={this.state.yvalue} onChange={this.yChange}  />
+      </label>
+      <label>Submit
+      <button onClick={this.clickHandler}>Button</button></label>
+      </div>
         <div className="map-container">
           <svg viewBox={`0 0 ${window.innerWidth + 500} ${window.innerHeight + 2500}`}>
             <g transform="rotate(-30) translate(0, 270)">
